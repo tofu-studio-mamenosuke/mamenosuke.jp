@@ -1,0 +1,137 @@
+<?php include dirname(__FILE__) . "/head.php"; ?>
+
+<body>
+
+<?php include dirname(__FILE__) . "/header.php"; ?>
+<?php include dirname(__FILE__) . "/navigation.php"; ?>
+
+    <!-- WRAP -->
+    <div class="wrapper">
+        <!-- PRODUCT --> 
+        <!-- 豆腐・揚げ物 --> 
+        <div class="grid-pord">
+            <div class="g-item-prod">
+                <h1 class="item-title">大豆の美味さを、カタチにする。</h1>
+                <p class="item-subtitle">佐賀県産フクユタカ100％、室戸沖の海水から作った純国産にがりを使用しました。消泡剤無添加。濃い豆乳を絞り豆の風味、甘みを味わえます。いわゆるもめん豆腐より柔らかく仕上げています。</p>
+            </div>
+        </div>
+        
+
+<?php include dirname(__FILE__) . "/generate_prod_tofu.php"; ?>
+
+
+        <!-- スイーツ --> 
+        <div class="grid-pord">
+            <div class="g-item-prod">
+                <h1 class="item-title">大豆の甘みに、おきかえる。</h1>
+                <p class="item-subtitle">牛乳や生クリーム、チーズなどの乳製品を、豆乳や豆腐、おからなどの大豆に置きかえることでカロリー控えめ、罪悪感少なめのスイーツに。また女性に嬉しい大豆の栄養素や繊維が加わりヘルシーさが増します。</p>
+            </div>
+        </div>
+        
+<?php include dirname(__FILE__) . "/generate_prod_sweets.php"; ?>
+        <!-- /PRODUCT --> 
+        
+        <!-- SHOP --> 
+        <!-- 小千谷店 --> 
+        <div class="grid-shop" id="shopinfo">
+            <div class="g-item-shop">
+                <address>
+                    <h5 class="item-title">豆ノ助 小千谷店</h5>
+                    <p class="address">947-0028　新潟県小千谷市城内2-12-32</p>
+                    <p class="address">Tel: 0258-77-3347</p>
+                    <p class="address">Open: 11:00 - 17:00</p>
+                    <p class="address">Holiday: 月/第1,3日</p>
+                    <p class="address">豆腐、揚げ物、スイーツ、ジェラート、惣菜</p>
+                </address>
+            </div>
+            <div class="g-item-shop">
+                <address>
+                    <h5 class="map">地図</h5>
+                    <a href="https://goo.gl/maps/9KziAixuEZA2"><p class="map">Google Maps</p></a>
+                </address>
+            </div>
+            <div class="g-item-shop">
+                <div class="calendar">
+                    <?php
+                    include_once dirname(__FILE__) . "/calendar-source-2.php";
+                    $bc = new business_calendar_2(2019,4);
+                    $bc->set_holiday_of_week(true, true, false, false, false, false, false);
+                    $bc->add_exception_business_day(2019, 2, 10);
+                    $bc->add_exception_business_day(2019, 2, 24);
+                    $bc->add_exception_holiday(2019, 1, 1);
+                    $bc->render();
+                    ?>
+                </div>
+            </div>
+            <div class="g-item-shop">
+                <div class="calendar">
+                    <?php
+                    include_once dirname(__FILE__) . "/calendar-source-2.php";
+                    $bc = new business_calendar_2(2019,5);
+                    $bc->set_holiday_of_week(true, true, false, false, false, false, false);
+                    $bc->add_exception_business_day(2019, 5, 12);
+                    $bc->add_exception_business_day(2019, 5, 26);
+                    $bc->add_exception_holiday(2019, 1, 1);
+                    $bc->render();
+                    ?>
+                </div>
+            </div>
+        </div>
+        <!-- 真人店 --> 
+        <div class="grid-shop shop-matto">
+            <div class="g-item-shop">
+                <address>
+                    <h5 class="item-title">豆ノ助 真人本店</h5>
+                    <p class="address">949-8726　新潟県小千谷市真人町586-7</p>
+                    <p class="address">Tel: 0258-86-2870</p>
+                    <p class="address">Open: 8:30 - 12:30</p>
+                    <p class="address">Holiday: 月</p>
+                    <p class="address">豆腐、揚げ物、スイーツ、惣菜</p>
+                </address>
+            </div>
+            <div class="g-item-shop">
+                <address>
+                    <h5 class="map">地図</h5>
+                    <a href="https://goo.gl/maps/NrECwuPoxRu"><p class="map">Google Maps</p></a>
+                </address>
+            </div>
+            <div class="g-item-shop">
+                <div class="calendar">
+                    <?php
+                    include_once dirname(__FILE__) . "/calendar-source-2.php";
+                    $bc = new business_calendar_2(2019,4);
+                    $bc->set_holiday_of_week(false, true, false, false, false, false, false);
+                    $bc->add_exception_holiday(2019, 2, 12);
+                    $bc->add_exception_holiday(2019, 2, 13);
+                    $bc->add_exception_business_day(2018, 7, 15);
+                    $bc->render();
+                    ?>
+                </div>
+            </div>
+            <div class="g-item-shop">
+                <div class="calendar">
+                    <?php
+                    include_once dirname(__FILE__) . "/calendar-source-2.php";
+                    $bc = new business_calendar_2(2019,5);
+                    $bc->set_holiday_of_week(false, true, false, false, false, false, false);
+                    $bc->add_exception_holiday(2019, 2, 12);
+                    $bc->add_exception_holiday(2019, 2, 13);
+                    $bc->add_exception_business_day(2018, 7, 15);
+                    $bc->render();
+                    ?>
+                </div>
+            </div>
+        </div>
+        
+        <!-- /MISSION -->        
+        <div class="mission f-container">
+        </div>
+        <!-- /MISSION -->
+    </div>
+    <!-- /WRAP -->
+
+    <!-- Footer -->
+    <?php include dirname(__FILE__) . "/footer.php"; ?>
+    <!-- /Footer -->
+</body>
+</html>
